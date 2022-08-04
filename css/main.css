@@ -1,0 +1,12 @@
+ /*
+    // # selector de id
+    // . selector de clase
+    // nombre de la etiqueta a modificar 
+    */
+
+#tablero {
+  width: 600px;
+  height: 600px;
+  background-color: bisque;
+  margin: auto;
+}
