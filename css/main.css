@@ -3,10 +3,147 @@
     // . selector de clase
     // nombre de la etiqueta a modificar 
     */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #tablero {
   width: 600px;
-  height: 600px;
+  height: 500px;
   background-color: bisque;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(5,1fr);
+  grid-template-areas: "position1 position2 position3 position4 position5 position6" 
+  "position18 title title title title position7"
+  "position17 title title title title position8"
+  "position16 title title title title position9"
+  "position15 position14 position13 position12 position11 position10";
+}
+
+
+#title {
+    background-color: blue;
+    grid-area: title;
+}
+
+#title >img{
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background-color: cornflowerblue;
+    padding: 10px;
+}
+
+#tablero > *:nth-child(2){
+    grid-area: position1
+}
+
+#tablero > *:nth-child(3){
+    grid-area: position2
+}
+#tablero > *:nth-child(4){
+    grid-area: position3
+}
+#tablero > *:nth-child(5){
+    grid-area: position4
+}
+#tablero > *:nth-child(6){
+    grid-area: position5
+}
+#tablero > *:nth-child(7){
+    grid-area: position6
+}
+#tablero > *:nth-child(8){
+    grid-area: position7
+}
+#tablero > *:nth-child(9){
+    grid-area: position8
+}
+#tablero > *:nth-child(10){
+    grid-area: position9
+}
+#tablero > *:nth-child(11){
+    grid-area: position10
+}
+#tablero > *:nth-child(12){
+    grid-area: position11
+}
+#tablero > *:nth-child(13){
+    grid-area: position12
+}
+#tablero > *:nth-child(14){
+    grid-area: position13
+}
+#tablero > *:nth-child(15){
+    grid-area: position14
+}
+#tablero > *:nth-child(16){
+    grid-area: position15
+}
+#tablero > *:nth-child(17){
+    grid-area: position16
+}
+#tablero > *:nth-child(18){
+    grid-area: position17
+}
+#tablero > *:nth-child(19){
+    grid-area: position18
+}
+ul {
+display:flex;
+justify-content: space-around;
+}
+ 
+li{
+    list-style: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid black;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    ;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        width: |100%;
+        height: 100%;
+        background-color: red;
+        padding: 10px;
+    }
+  }
+
+/* BREAKPOINTS*/
+/* QUE DISPOSITIVOS TOMARE EN CUENTA */
+/* EXTRA-LARGE >1920 PX
+LARGE (MONITORES) <1024PX
+MEDIUMS (TABLETS) <768 PX
+SMALL (CELULARES) <425 PX
+EXTRA-SMALL (RELOJES) <350 PX*/
+
+/*MEDIA QUERIE*/
+@media screen and (max-width: 900px) {
+    #tablero {
+        width: 300px;
+        height: 300px;
+    }
 }
