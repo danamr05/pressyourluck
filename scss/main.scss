@@ -1,0 +1,40 @@
+@use "_Reset";
+@import "variables";
+@import "mixins";
+
+#title {
+    font-size: $font-size;
+    border: $border;
+}
+
+.saludo {
+    justify-content: $align-saludo;
+    span {
+        color: $color-saludo;
+        @include messagestyle;
+        background-color: gray;
+
+@media screen and (max-width: 768px) {
+    background-color:red;
+}
+
+@media screen and (max-width: 425px) {
+        background-color: yellow;
+}
+
+}
+}
+
+.respuesta {
+    justify-content: $align-respuesta;
+    span{
+        color:$color-respuesta;
+        @include messagestyle;
+        background-color: aquamarine;
+    }
+}
+
+.container {
+    display: flex;
+    margin: 24px;
+}

@@ -1,0 +1,5 @@
+@mixin messagestyle {
+    border: $border-message;
+    padding: 16px;
+    border-radius: 16px;
+}
