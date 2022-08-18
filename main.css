@@ -8,23 +8,25 @@ header nav ul {
   display: flex;
   justify-content: space-around;
 }
-header nav ul li {
+header nav ul a {
+  flex-grow: 1;
+}
+header nav ul a li {
   list-style: none;
   padding: 16px;
-  flex-grow: 1;
   text-align: center;
 }
-header nav ul li:hover {
+header nav ul a li:hover {
   background-color: grey;
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-  header nav ul li:hover {
+  header nav ul a li:hover {
     background-color: pink;
   }
 }
 @media screen and (max-width: 425px) {
-  header nav ul li:hover {
+  header nav ul a li:hover {
     background-color: coral;
   }
 }
